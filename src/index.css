@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #000000;
+  --color-brand-white: #ffffff;
+  --color-brand-gray-100: #f5f5f5;
+  --color-brand-gray-200: #e5e5e5;
+  --color-brand-gray-300: #d4d4d4;
+  --color-brand-gray-400: #a3a3a3;
+  --color-brand-gray-500: #737373;
+  --color-brand-gray-600: #525252;
+  --color-brand-gray-700: #404040;
+  --color-brand-gray-800: #262626;
+  --color-brand-gray-900: #171717;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans antialiased bg-brand-white text-brand-black;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-brand-white bg-brand-black border-2 border-brand-black hover:bg-transparent hover:text-brand-black transition-colors duration-200 rounded-none;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-brand-black bg-transparent border-2 border-brand-black hover:bg-brand-black hover:text-brand-white transition-colors duration-200 rounded-none;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+  }
+  .section-subtitle {
+    @apply mt-4 text-lg md:text-xl text-brand-gray-600 max-w-2xl;
+  }
+}
